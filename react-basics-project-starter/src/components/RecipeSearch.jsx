@@ -20,13 +20,6 @@ export const RecipeSearch = ({ clickFn }) => {
     );
   });
 
-  let columns = 4; // Default number of columns
-  if (matchedRecipes.length === 1) {
-    columns = 1; // If only one item, set columns to 1 for centering
-  } else if (matchedRecipes.length === 2 || matchedRecipes.length === 3) {
-    columns = matchedRecipes.length; // If 2 or 3 items, set columns to match the number of items
-  }
-
   return (
     <Center padding="0" flexDirection="column">
       <Stack marginBottom="0.75rem" spacing="1.5rem">
