@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { TextInput } from "./ui/TextInput";
 import { data } from "../utils/data";
-import { Center, SimpleGrid, Stack } from "@chakra-ui/react";
+import { Center, SimpleGrid, Stack, Flex } from "@chakra-ui/react";
 import { RecipeListPage } from "../pages/RecipeListPage";
 
 export const RecipeSearch = ({ clickFn }) => {
@@ -28,23 +28,19 @@ export const RecipeSearch = ({ clickFn }) => {
   }
 
   return (
-    <Center flexDirection="column">
-      <Stack marginBottom="1rem" spacing="1.5rem">
+    <Center padding="0" flexDirection="column">
+      <Stack marginBottom="0.75rem" spacing="1.5rem">
         <TextInput
           onChange={handleChange}
           variant="filled"
           margin="0 auto"
-          size={{ base: "xs", sm: "sm", md: "lg", lg: "lg" }}
-          width={{ base: "90%", sm: "sm", md: "lg", lg: "lg" }}
+          size={{ base: "md", sm: "md", md: "lg", lg: "lg" }}
+          width={{ base: "15rem", sm: "25rem", md: "lg", lg: "lg" }}
           placeholder="Search recipes"
         />
-        <SimpleGrid
-          justifyItems="center"
-          alignItems="center"
-          columns={{ base: 1, sm: 1, md: columns - 1, lg: columns, xl: columns }}
-          spacing="2rem">
+        <Flex maxWidth="1300px" justifyContent="center" alignItems="center" gap="2rem" flexWrap="wrap">
           <RecipeListPage clickFn={clickFn} recipes={matchedRecipes} />
-        </SimpleGrid>
+        </Flex>
       </Stack>
     </Center>
   );

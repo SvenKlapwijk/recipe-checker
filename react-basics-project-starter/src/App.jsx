@@ -12,8 +12,8 @@ export const App = () => {
         <RecipePage clickFn={setSelectedRecipe} item={selectedRecipe} />
       ) : (
         <Text padding="0 1rem 0 1rem" minHeight="100vh" as="div" backgroundColor="blue.300">
-          <Stack marginTop="1rem" spacing="1.5rem">
-            <Heading textAlign="center" as="h1">
+          <Stack spacing="1.5rem">
+            <Heading marginTop="1rem" textAlign="center" as="h1">
               Sven's recipe app
             </Heading>
             <RecipeSearch clickFn={setSelectedRecipe} />

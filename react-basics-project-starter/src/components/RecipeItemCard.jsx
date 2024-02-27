@@ -24,7 +24,7 @@ export const RecipeItemCard = ({ item, clickFn }) => {
       _hover={{ transform: "scale(1.01)" }}
       onClick={() => clickFn(item)}
       backgroundColor="gray.50"
-      width={{ base: "220px", sm: "240px" }}
+      width={{ base: "300px", sm: "300px" }}
       height="26rem"
       gap="0.75rem"
       justifyContent="center"
