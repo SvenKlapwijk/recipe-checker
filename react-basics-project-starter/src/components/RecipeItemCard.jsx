@@ -1,4 +1,4 @@
-import { Card, CardBody, CardHeader, Image, Heading, Tag, Flex, Stack } from "@chakra-ui/react";
+import { Card, CardBody, CardHeader, Image, Box, Heading, Tag, Flex, Stack } from "@chakra-ui/react";
 import { Text } from "@chakra-ui/react";
 
 export const RecipeItemCard = ({ item, clickFn }) => {
@@ -33,7 +33,12 @@ export const RecipeItemCard = ({ item, clickFn }) => {
       overflow="hidden"
       paddingBottom="2rem">
       <CardHeader padding="0">
-        <Image src={item.image} alt={item.label} width="100%" height="150px" />
+        <Box
+          width="100%"
+          height="150px"
+          backgroundImage={`url(${item.image})`}
+          backgroundSize="cover"
+          backgroundPosition="center"></Box>
       </CardHeader>
       <CardBody padding="0 1rem">
         <Text fontSize="0.75rem" textTransform="uppercase" color="grey">

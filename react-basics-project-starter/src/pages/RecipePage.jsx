@@ -13,7 +13,12 @@ export const RecipePage = ({ item, clickFn }) => {
         bg="gray.100"
         minWidth={{ lg: "800px" }}
         maxWidth="800px">
-        <Image width="100%" height="300px" src={item.image}></Image>
+        <Box
+          width="100%"
+          height="400px"
+          backgroundImage={`url(${item.image})`}
+          backgroundSize="cover"
+          backgroundPosition="center"></Box>
         <SimpleGrid spacing="3rem" padding={{ base: "1rem", sm: "1.5rem" }} columns={{ base: 1, md: 2 }}>
           <Flex flexDirection="column">
             <Stack spacing="0.5rem">
