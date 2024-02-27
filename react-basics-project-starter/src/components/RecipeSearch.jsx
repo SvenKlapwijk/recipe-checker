@@ -21,14 +21,14 @@ export const RecipeSearch = ({ clickFn }) => {
   });
 
   return (
-    <Center padding="0" flexDirection="column">
+    <Center width="100%" padding="0" flexDirection="column">
       <Stack marginBottom="0.75rem" spacing="1.5rem">
         <TextInput
           onChange={handleChange}
           variant="filled"
           margin="0 auto"
-          size={{ base: "md", sm: "md", md: "lg", lg: "lg" }}
-          width={{ base: "15rem", sm: "25rem", md: "lg", lg: "lg" }}
+          size={{ base: "md", sm: "lg", md: "lg", lg: "lg" }}
+          width={{ base: "15rem", sm: "20rem", md: "lg", lg: "lg" }}
           placeholder="Search recipes"
         />
         <Flex maxWidth="1300px" justifyContent="center" alignItems="center" gap="2rem" flexWrap="wrap">

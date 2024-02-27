@@ -7,19 +7,21 @@ import { Center, Heading, Stack, Text } from "@chakra-ui/react";
 export const App = () => {
   const [selectedRecipe, setSelectedRecipe] = useState();
   return (
-    <div>
+    <Center width="100%">
       {selectedRecipe ? (
         <RecipePage clickFn={setSelectedRecipe} item={selectedRecipe} />
       ) : (
-        <Text padding="0 1rem 0 1rem" width="100vw" minHeight="100vh" as="div" backgroundColor="blue.300">
-          <Stack spacing="1.5rem">
-            <Heading marginTop="1rem" textAlign="center" as="h1">
-              Sven's recipe app
-            </Heading>
-            <RecipeSearch clickFn={setSelectedRecipe} />
-          </Stack>
-        </Text>
+        <Center width="100%">
+          <Text padding="0 1.5rem" width="100vw" minHeight="100%" as="div" backgroundColor="blue.300">
+            <Stack spacing="1.5rem">
+              <Heading marginTop="1rem" textAlign="center" as="h1">
+                Sven's recipe app
+              </Heading>
+              <RecipeSearch clickFn={setSelectedRecipe} />
+            </Stack>
+          </Text>
+        </Center>
       )}
-    </div>
+    </Center>
   );
 };

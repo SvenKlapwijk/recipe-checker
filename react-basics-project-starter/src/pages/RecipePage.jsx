@@ -4,7 +4,14 @@ export const RecipePage = ({ item, clickFn }) => {
   const hasDietLabels = item.dietLabels.length > 0;
   const hasCautionLabels = item.cautions.length > 0;
   return (
-    <Flex padding="1rem" minHeight="100vh" alignItems="center" flexDirection="column" backgroundColor="blue.300">
+    <Flex
+      width="100%"
+      padding="1rem"
+      minHeight="100vh"
+      alignItems="center"
+      flexDirection="column"
+      backgroundColor="blue.300"
+      justifyContent="center">
       <Container
         borderRadius="2xl"
         overflow="hidden"
